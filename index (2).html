@@ -1,0 +1,583 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everest Abroad Study | Learn German, Build Your Future</title>
+<link rel="icon" type="image/png" href="everest-abroad-study-logo.png">
+<meta name="theme-color" content="#D52033">
+<meta name="description" content="Learn German at Everest Abroad Study, Bharatpur-10, Chitwan. Enrol in A1, A2, B1 and B2 classes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy:#071b3b;
+  --blue:#123d75;
+  --gold:#e8b85c;
+  --light:#f5f7fb;
+  --text:#17243a;
+  --muted:#66748a;
+}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:white}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+.container{width:min(1160px,90%);margin:auto}
+
+.topbar{
+background:var(--navy);color:#dbe6f5;padding:10px 5%;
+font-size:12px;display:flex;justify-content:space-between;
+gap:12px;flex-wrap:wrap
+}
+.topbar a:hover{color:var(--gold)}
+
+header{background:white;position:sticky;top:0;z-index:20;box-shadow:0 3px 18px #071b3b0d}
+.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-icon{width:43px;height:43px;background:var(--navy);color:var(--gold);border-radius:12px;display:grid;place-items:center;font-size:23px;font-weight:800}
+.logo strong{display:block;color:var(--navy);font-size:17px}
+.logo small{color:var(--muted);font-size:10px;letter-spacing:2px}
+.navlinks{display:flex;gap:22px;align-items:center;font-size:13px;font-weight:600}
+.navlinks a:hover{color:#bd8b32}
+
+.btn{
+display:inline-flex;justify-content:center;align-items:center;
+background:var(--gold);color:var(--navy);padding:13px 21px;
+border-radius:7px;font-size:13px;font-weight:800;border:0;
+transition:.25s
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px #e8b85c44}
+.btn-outline{background:transparent;border:1px solid #ffffff80;color:white}
+.btn-call{background:var(--navy);color:white}
+.btn-call:hover{background:var(--blue)}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.menu{display:none;background:none;border:0;font-size:26px;color:var(--navy)}
+
+.hero{
+background:linear-gradient(90deg,#061832f5 0%,#071b3bdf 52%,#071b3b65 100%),url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85') center/cover;
+color:white;min-height:570px;display:flex;align-items:center
+}
+.hero-content{max-width:670px;padding:90px 0}
+.eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(42px,6vw,70px);line-height:1.13;margin-bottom:23px}
+.hero h1 span{color:var(--gold)}
+.hero p{color:#d5dfec;font-size:16px;line-height:1.9;max-width:540px;margin-bottom:30px}
+.actions{display:flex;gap:13px;flex-wrap:wrap}
+
+.stats{background:var(--navy);color:white}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:27px 0;text-align:center}
+.stat{border-right:1px solid #ffffff20}
+.stat:last-child{border:0}
+.stat strong{display:block;color:var(--gold);font-size:26px}
+.stat span{font-size:11px;color:#c4d0df}
+
+section{padding:90px 0}
+.section-heading{text-align:center;max-width:650px;margin:0 auto 43px}
+.section-heading .eyebrow{margin-bottom:12px}
+.section-heading h2{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,43px);color:var(--navy);margin-bottom:14px}
+.section-heading p{color:var(--muted);font-size:14px;line-height:1.8}
+
+.courses{background:var(--light)}
+.course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.course{background:white;border:1px solid #e9edf4;border-radius:13px;padding:26px 21px;transition:.3s}
+.course:hover{transform:translateY(-7px);box-shadow:0 15px 35px #071b3b12;border-color:var(--gold)}
+.course-level{font-size:12px;color:#b0802c;font-weight:800;letter-spacing:2px}
+.course h3{font-size:29px;color:var(--navy);margin:12px 0}
+.course p{font-size:13px;color:var(--muted);line-height:1.8;min-height:70px}
+.course a{display:inline-block;margin-top:20px;color:var(--blue);font-size:13px;font-weight:800}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.about-image{min-height:400px;border-radius:16px;background:linear-gradient(#071b3b20,#071b3b30),url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=85') center/cover;position:relative}
+.image-note{position:absolute;bottom:22px;left:22px;background:white;padding:17px 22px;border-radius:10px}
+.image-note strong{color:var(--navy);font-size:24px;display:block}
+.image-note span{font-size:11px;color:var(--muted)}
+.about-text h2{font-family:'Playfair Display',serif;font-size:39px;color:var(--navy);margin-bottom:20px}
+.about-text p{color:var(--muted);line-height:1.9;font-size:14px;margin-bottom:15px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:25px 0}
+.feature{font-size:13px;font-weight:700;color:var(--navy)}
+.feature span{color:#bd8b32;margin-right:8px}
+
+.services{background:var(--light)}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{padding:29px;background:white;border-radius:12px}
+.service-icon{width:49px;height:49px;background:#edf2fa;color:var(--blue);border-radius:12px;display:grid;place-items:center;font-size:22px;margin-bottom:20px}
+.service h3{color:var(--navy);font-size:17px;margin-bottom:11px}
+.service p{font-size:13px;line-height:1.8;color:var(--muted)}
+
+.cta{background:linear-gradient(110deg,#071b3b,#17447b);color:white;text-align:center;padding:68px 20px}
+.cta h2{font-family:'Playfair Display',serif;font-size:37px;margin-bottom:14px}
+.cta p{color:#d5dfec;margin-bottom:25px;font-size:14px}
+
+.faq-list{max-width:780px;margin:auto}
+details{border-bottom:1px solid #e7ebf1;padding:20px 5px}
+summary{font-weight:700;color:var(--navy);cursor:pointer;list-style:none}
+summary:after{content:'+';float:right;color:#bd8b32;font-size:20px}
+details[open] summary:after{content:'−'}
+details p{color:var(--muted);font-size:13px;line-height:1.8;margin-top:13px}
+
+.contact{background:var(--light)}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:45px}
+.contact-info h2{font-family:'Playfair Display',serif;color:var(--navy);font-size:36px;margin-bottom:17px}
+.contact-info p{color:var(--muted);font-size:14px;line-height:1.9;margin-bottom:22px}
+.info-line{padding:13px 0;border-bottom:1px solid #dfe5ee;font-size:13px}
+.info-line strong{display:block;color:var(--navy);margin-bottom:5px}
+.info-line a{color:var(--blue);font-weight:600}
+.info-line a:hover{color:#bd8b32}
+.contact-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+
+.form-box{background:white;padding:30px;border-radius:14px;box-shadow:0 10px 35px #071b3b0a}
+.form-box h3{font-size:21px;color:var(--navy);margin-bottom:22px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:12px;font-weight:700;color:var(--navy)}
+.field input,.field select,.field textarea{padding:13px;border:1px solid #dfe5ee;border-radius:7px;font:inherit;font-size:13px;width:100%;background:white}
+.field textarea{min-height:95px;resize:vertical}
+.form-box button{width:100%;margin-top:18px}
+
+footer{background:#05152e;color:white;padding:55px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:35px}
+footer h3{font-size:15px;margin-bottom:17px;color:var(--gold)}
+footer p,footer a{font-size:12px;color:#bbc9dc;line-height:2}
+footer a{display:block}
+footer a:hover{color:var(--gold)}
+.social-links{display:flex;gap:15px;flex-wrap:wrap;margin-top:10px}
+.social-links a{font-weight:700}
+.copyright{border-top:1px solid #ffffff20;padding-top:20px;text-align:center;font-size:11px;color:#9aaec6}
+
+/* Floating contact buttons */
+.floating-actions{
+position:fixed;right:20px;bottom:20px;z-index:30;
+display:flex;flex-direction:column;gap:11px
+}
+.float-btn{
+width:53px;height:53px;border-radius:50%;color:white;
+display:grid;place-items:center;font-size:24px;
+box-shadow:0 5px 20px #0003;transition:.2s
+}
+.float-btn:hover{transform:scale(1.08)}
+.whatsapp{background:#20b968}
+.call-float{background:var(--navy)}
+
+@media(max-width:950px){
+.navlinks{gap:13px;font-size:12px}
+.nav-actions .btn{padding:11px 13px;font-size:12px}
+}
+@media(max-width:850px){
+.navlinks{display:none;position:absolute;top:82px;left:0;width:100%;background:white;padding:25px;flex-direction:column;align-items:flex-start;box-shadow:0 10px 20px #0001}
+.navlinks.show{display:flex}
+.menu{display:block}
+.nav-actions .btn{display:none}
+.course-grid{grid-template-columns:repeat(2,1fr)}
+.about-grid,.contact-grid{grid-template-columns:1fr}
+.service-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:550px){
+.topbar{justify-content:center;text-align:center}
+.stats-grid{grid-template-columns:1fr 1fr;gap:20px}
+.stat:nth-child(2){border:0}
+.course-grid,.service-grid,.footer-grid{grid-template-columns:1fr}
+.form-grid{grid-template-columns:1fr}
+.field.full{grid-column:auto}
+section{padding:65px 0}
+.hero{min-height:530px}
+.about-image{min-height:300px}
+.contact-buttons .btn{width:100%}
+}
+
+/* ===== EVEREST LUXURY RED / WHITE / GOLD THEME ===== */
+:root {
+  --navy:#D52033;
+  --blue:#A91527;
+  --gold:#C5A253;
+  --light:#FFF9F7;
+  --text:#292323;
+  --muted:#746B6B;
+}
+body{color:var(--text);background:#fff}
+.topbar{background:#8F1022;color:#fff}
+.topbar a:hover{color:#E7CD91}
+header{background:#fff;box-shadow:0 4px 24px rgba(90,15,25,.09);border-bottom:1px solid #F1E5E2}
+.nav{min-height:92px}
+.logo{min-width:0}
+.logo img{display:block;width:190px;height:82px;object-fit:contain;object-position:left center}
+.logo-icon{background:var(--navy);color:var(--gold)}
+.logo strong{color:#8F1022}
+.navlinks a{color:#332727;transition:color .2s}
+.navlinks a:hover{color:var(--navy)}
+.btn{background:var(--navy);color:#fff;border:1px solid var(--navy);box-shadow:0 5px 14px rgba(213,32,51,.12)}
+.btn:hover{background:#A91527;border-color:#A91527;box-shadow:0 9px 22px rgba(143,16,34,.2)}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,.8);color:#fff;box-shadow:none}
+.btn-outline:hover{background:#fff;color:#A91527;border-color:#fff}
+.btn-call{background:#8F1022;color:#fff;border-color:#8F1022}
+.btn-call:hover{background:#64101B;border-color:#64101B}
+.menu{color:#8F1022}
+.hero{
+ background:linear-gradient(90deg,rgba(76,5,18,.94) 0%,rgba(143,16,34,.86) 54%,rgba(143,16,34,.38) 100%),url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
+.eyebrow{color:#E7CD91}
+.hero h1 span{color:#E7CD91}
+.hero p{color:#F8EDEF}
+.stats{background:linear-gradient(110deg,#710D1C,#A91527);border-top:1px solid rgba(197,162,83,.5);border-bottom:1px solid rgba(197,162,83,.5)}
+.stat strong{color:#E7CD91}
+.stat span{color:#F4E3E5}
+.section-heading h2{color:#8F1022}
+.courses,.services,.contact{background:#FFF9F7}
+.course{border:1px solid #F0E0DD;box-shadow:0 5px 18px rgba(90,15,25,.035)}
+.course:hover{box-shadow:0 16px 36px rgba(90,15,25,.10);border-color:var(--gold)}
+.course-level{color:#A77D31}
+.course h3{color:#8F1022}
+.course a{color:#A91527}
+.course a:hover{color:#C5A253}
+.about-image{background-image:linear-gradient(rgba(143,16,34,.12),rgba(143,16,34,.18)),url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=85')}
+.image-note{border:1px solid #E8D7B3;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.image-note strong{color:#8F1022}
+.about-text h2,.contact-info h2{color:#8F1022}
+.feature{color:#4A292B}
+.feature span{color:#B28A43}
+.service{border:1px solid #F0E0DD;box-shadow:0 8px 24px rgba(90,15,25,.035)}
+.service-icon{background:#FBEAEC;color:#A91527}
+.service h3{color:#8F1022}
+.cta{background:linear-gradient(110deg,#710D1C,#B7192D);border-top:1px solid #C5A253;border-bottom:1px solid #C5A253}
+.cta .eyebrow{color:#E7CD91}
+.cta h2{color:#fff}
+.cta p{color:#F8EDEF}
+summary{color:#8F1022}
+summary:after{color:#B28A43}
+details{border-bottom-color:#EEDFDA}
+.contact-info h2{color:#8F1022}
+.info-line{border-bottom-color:#EADBD7}
+.info-line strong{color:#8F1022}
+.info-line a{color:#A91527}
+.info-line a:hover{color:#B28A43}
+.form-box{border:1px solid #F0E0DD;box-shadow:0 12px 35px rgba(90,15,25,.07)}
+.form-box h3,.field label{color:#8F1022}
+.field input,.field select,.field textarea{border-color:#E8D9D5}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid rgba(197,162,83,.35);border-color:#C5A253}
+footer{background:linear-gradient(115deg,#570B17,#861022);border-top:3px solid #C5A253}
+footer h3{color:#E7CD91}
+footer p,footer a{color:#F0DDE0}
+footer a:hover{color:#E7CD91}
+.copyright{border-top-color:rgba(255,255,255,.2);color:#D9BEC2}
+.call-float{background:#8F1022;border:1px solid rgba(255,255,255,.25)}
+.whatsapp{background:#20b968}
+.float-btn{box-shadow:0 6px 22px rgba(55,5,12,.28)}
+@media(max-width:850px){
+ .navlinks{top:92px;background:#fff;border-top:1px solid #F1E5E2}
+ .logo img{width:165px;height:72px}
+}
+@media(max-width:550px){
+ .logo img{width:145px;height:65px}
+ .topbar{background:#8F1022}
+ .hero{background-position:58% center}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+<span>
+📍 <a href="https://www.google.com/maps/search/?api=1&query=Bharatpur-10%2C+Chitwan%2C+Nepal" target="_blank" rel="noopener noreferrer">Bharatpur-10, Chitwan, Nepal ↗</a>
+</span>
+<span>
+✉ <a href="mailto:everest.abroad12@gmail.com">everest.abroad12@gmail.com</a>
+&nbsp; | &nbsp; ☎ <a href="tel:+9779855047889">9855047889</a>
+</span>
+</div>
+
+<header>
+<div class="container nav">
+
+<a href="#home" class="logo" aria-label="Everest Abroad Study home">
+<img src="everest-abroad-study-logo.png" alt="Everest Abroad Study logo">
+</a>
+
+<nav class="navlinks" id="navlinks">
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#courses">Courses</a>
+<a href="#services">Services</a>
+<a href="#faq">FAQs</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="nav-actions">
+<a class="btn btn-call" href="tel:+9779855047889">☎ Call Now</a>
+<a class="btn" href="#contact">Enquire Now ↗</a>
+</div>
+
+<button class="menu" aria-label="Toggle navigation menu" onclick="document.getElementById('navlinks').classList.toggle('show')">☰</button>
+
+</div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+<div class="eyebrow">YOUR JOURNEY STARTS HERE</div>
+<h1>Learn German.<br>Build Your <span>Future.</span></h1>
+<p>Take your first step towards new opportunities with quality German language education at Everest Abroad Study. Learn, grow and move forward with confidence.</p>
+<div class="actions">
+<a class="btn" href="#courses">Explore Our Courses →</a>
+<a class="btn btn-outline" href="#about">Discover Everest</a>
+<a class="btn btn-call" href="tel:+9779855047889">☎ Call Now</a>
+</div>
+</div>
+</div>
+</section>
+
+<div class="stats">
+<div class="container stats-grid">
+<div class="stat"><strong>4</strong><span>German Language Levels</span></div>
+<div class="stat"><strong>A1–B2</strong><span>Structured Learning</span></div>
+<div class="stat"><strong>100%</strong><span>Learning Focus</span></div>
+<div class="stat"><strong>1 Goal</strong><span>Your Brighter Future</span></div>
+</div>
+</div>
+
+<section class="courses" id="courses">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow">OUR PROGRAMS</div>
+<h2>Explore Our German Courses</h2>
+<p>Start from the basics or strengthen your existing knowledge. Find the German language level that suits your learning journey.</p>
+</div>
+<div class="course-grid">
+<div class="course"><div class="course-level">BEGINNER</div><h3>A1</h3><p>Learn basic German expressions, introductions and everyday communication.</p><a href="#contact">Enquire about A1 →</a></div>
+<div class="course"><div class="course-level">ELEMENTARY</div><h3>A2</h3><p>Build vocabulary and communicate in familiar everyday situations.</p><a href="#contact">Enquire about A2 →</a></div>
+<div class="course"><div class="course-level">INTERMEDIATE</div><h3>B1</h3><p>Develop independent communication and understand common topics.</p><a href="#contact">Enquire about B1 →</a></div>
+<div class="course"><div class="course-level">UPPER INTERMEDIATE</div><h3>B2</h3><p>Improve fluency and express ideas confidently across varied topics.</p><a href="#contact">Enquire about B2 →</a></div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about-grid">
+<div class="about-image">
+<div class="image-note"><strong>EVEREST</strong><span>Learn Today. Grow Tomorrow.</span></div>
+</div>
+<div class="about-text">
+<div class="eyebrow">WHO WE ARE</div>
+<h2>Welcome to Everest Abroad Study</h2>
+<p>Everest Abroad Study is a language learning institute located in Bharatpur-10, Chitwan, Nepal. We focus on helping learners develop their German language skills through structured learning programs.</p>
+<p>Whether you are beginning with A1 or progressing towards B2, we are here to support your learning journey.</p>
+<div class="features">
+<div class="feature"><span>✓</span> Structured Courses</div>
+<div class="feature"><span>✓</span> Learning Support</div>
+<div class="feature"><span>✓</span> Multiple Levels</div>
+<div class="feature"><span>✓</span> Student Guidance</div>
+</div>
+<a class="btn" href="#contact">Get in Touch →</a>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow">WHAT WE OFFER</div>
+<h2>Learning Made More Meaningful</h2>
+<p>Build your language skills with a clear learning path and guidance throughout your studies.</p>
+</div>
+<div class="service-grid">
+<div class="service"><div class="service-icon">📚</div><h3>German Language Classes</h3><p>Learn German through our A1, A2, B1 and B2 programs.</p></div>
+<div class="service"><div class="service-icon">🎯</div><h3>Level-Based Learning</h3><p>Choose a course that matches your current language knowledge.</p></div>
+<div class="service"><div class="service-icon">🤝</div><h3>Student Guidance</h3><p>Get information and support to help plan your language learning journey.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+<div class="eyebrow">TAKE THE FIRST STEP</div>
+<h2>Your German Learning Journey Starts Today</h2>
+<p>Connect with Everest Abroad Study and find the right course for you.</p>
+<a class="btn" href="#contact">Start Your Enquiry →</a>
+</div>
+</section>
+
+<section id="faq">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow">GOT QUESTIONS?</div>
+<h2>Frequently Asked Questions</h2>
+<p>Some helpful answers before you begin your learning journey.</p>
+</div>
+<div class="faq-list">
+<details><summary>Which German language courses are available?</summary><p>We offer German language courses at A1, A2, B1 and B2 levels.</p></details>
+<details><summary>Where is Everest Abroad Study located?</summary><p>We are located in Bharatpur-10, Chitwan, Nepal.</p></details>
+<details><summary>How can I enrol in a course?</summary><p>Contact us using the enquiry form or WhatsApp to learn about available classes and enrolment.</p></details>
+<details><summary>How can I contact the institute?</summary><p>You can call 9855047889 or email everest.abroad12@gmail.com.</p></details>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow">LET'S CONNECT</div>
+<h2>Start Your Enquiry</h2>
+<p>Interested in learning German? Send us your details and we'll help you get started.</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-info">
+<h2>We'd Love to Hear From You.</h2>
+<p>Have questions about our courses? Contact Everest Abroad Study and take the next step in your language learning journey.</p>
+
+<div class="info-line">
+<strong>📍 Visit Us</strong>
+<a href="https://www.google.com/maps/search/?api=1&query=Bharatpur-10%2C+Chitwan%2C+Nepal" target="_blank" rel="noopener noreferrer">Bharatpur-10, Chitwan, Nepal ↗</a>
+</div>
+
+<div class="info-line">
+<strong>☎ Call Us</strong>
+<a href="tel:+9779855047889">9855047889</a> /
+<a href="tel:+9779845110468">9845110468</a>
+</div>
+
+<div class="info-line">
+<strong>✉ Email</strong>
+<a href="mailto:everest.abroad12@gmail.com">everest.abroad12@gmail.com</a>
+</div>
+
+<div class="info-line">
+<strong>💬 WhatsApp</strong>
+<a href="https://wa.me/9779855047889" target="_blank" rel="noopener noreferrer">+977 9855047889 ↗</a>
+</div>
+
+<div class="contact-buttons">
+<a class="btn btn-call" href="tel:+9779855047889">☎ Call Now</a>
+<a class="btn" href="https://wa.me/9779855047889" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+</div>
+</div>
+
+<div class="form-box">
+<h3>Student Enquiry Form</h3>
+<form id="enquiryForm">
+<div class="form-grid">
+
+<div class="field">
+<label for="name">Full Name *</label>
+<input id="name" required placeholder="Your full name">
+</div>
+
+<div class="field">
+<label for="phone">Phone Number *</label>
+<input id="phone" required type="tel" placeholder="Your phone number">
+</div>
+
+<div class="field">
+<label for="email">Email Address</label>
+<input id="email" type="email" placeholder="Your email">
+</div>
+
+<div class="field">
+<label for="course">Interested Course *</label>
+<select id="course" required>
+<option value="">Select course</option>
+<option>A1 Beginner</option>
+<option>A2 Elementary</option>
+<option>B1 Intermediate</option>
+<option>B2 Upper Intermediate</option>
+</select>
+</div>
+
+<div class="field full">
+<label for="message">Your Message</label>
+<textarea id="message" placeholder="Tell us what you'd like to know..."></textarea>
+</div>
+
+</div>
+<button class="btn" type="submit">Send Enquiry via WhatsApp →</button>
+</form>
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+
+<div>
+<h3>EVEREST ABROAD STUDY</h3>
+<p>Helping learners build their German language skills through structured courses and student guidance in Chitwan, Nepal.</p>
+</div>
+
+<div>
+<h3>QUICK LINKS</h3>
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#courses">Our Courses</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div>
+<h3>CONTACT & SOCIAL</h3>
+<p>Bharatpur-10, Chitwan</p>
+<p><a href="tel:+9779855047889">9855047889</a></p>
+<p><a href="tel:+9779845110468">9845110468</a></p>
+<p><a href="mailto:everest.abroad12@gmail.com">everest.abroad12@gmail.com</a></p>
+
+<div class="social-links">
+<a href="https://www.facebook.com/share/1EVyYHPxRe/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+<a href="https://www.tiktok.com/@everest_abroad_study" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+</div>
+
+<p style="margin-top:12px">
+<a href="https://www.google.com/maps/search/?api=1&query=Bharatpur-10%2C+Chitwan%2C+Nepal" target="_blank" rel="noopener noreferrer">Find Us on Google Maps ↗</a>
+</p>
+</div>
+
+</div>
+
+<div class="copyright">© 2026 Everest Abroad Study. All rights reserved.</div>
+</div>
+</footer>
+
+<div class="floating-actions">
+<a class="float-btn call-float" href="tel:+9779855047889" aria-label="Call Everest Abroad Study">☎</a>
+<a class="float-btn whatsapp" href="https://wa.me/9779855047889" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">☏</a>
+</div>
+
+<script>
+document.getElementById('enquiryForm').addEventListener('submit',function(e){
+e.preventDefault();
+
+const name=document.getElementById('name').value.trim();
+const phone=document.getElementById('phone').value.trim();
+const email=document.getElementById('email').value.trim();
+const course=document.getElementById('course').value;
+const message=document.getElementById('message').value.trim();
+
+const text=`Hello Everest Abroad Study!
+
+I would like to enquire about your German language classes.
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email || 'Not provided'}
+Interested Course: ${course}
+Message: ${message || 'No additional message'}
+
+Thank you!`;
+
+const whatsappURL='https://wa.me/9779855047889?text='+encodeURIComponent(text);
+window.open(whatsappURL,'_blank');
+});
+</script>
+
+</body>
+</html>
